@@ -24,12 +24,27 @@ export default function App() {
     <div>
       <h1>React Redux</h1>
       {data.name.length <= 0 ? <NameComp /> : null}
-      {data.email.length <= 0 ? <EmailComp /> : null}
+      {data.email.length <= 0 && data.name.length > 0 ? <EmailComp /> : null}
 
-      {data.mobile.length <= 0 ? <MobileNoComp /> : null}
-      {data.gender.length <= 0 ? <GenderComp /> : null}
+      {data.name.length > 0 &&
+      data.email.length > 0 &&
+      data.mobile.length <= 0 ? (
+        <MobileNoComp />
+      ) : null}
+      {data.name.length > 0 &&
+      data.email.length > 0 &&
+      data.mobile.length > 0 &&
+      data.gender.length <= 0 ? (
+        <GenderComp />
+      ) : null}
 
-      {data.email.length <= 0 ? <PasswordComp /> : null}
+      {data.name.length > 0 &&
+      data.email.length > 0 &&
+      data.mobile.length > 0 &&
+      data.gender.length > 0 &&
+      data.password.length <= 0 ? (
+        <PasswordComp />
+      ) : null}
     </div>
   );
 }

@@ -32,13 +32,15 @@ export default function NameComp() {
           }}
         />
         <br></br>
-        <button
-          onClick={() => {
-            dispatch(saveName(name));
-          }}
-        >
-          Proceed
-        </button>
+        <div style={{ marginTop: '20px' }}>
+          <button
+            onClick={() => {
+              dispatch(saveName(name));
+            }}
+          >
+            Proceed
+          </button>
+        </div>
       </form>
     </div>
   );
