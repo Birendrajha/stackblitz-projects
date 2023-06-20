@@ -14,6 +14,7 @@ import EmailComp from './components/email.comp';
 import MobileNoComp from './components/mobile.comp';
 import GenderComp from './components/gender.comp';
 import PasswordComp from './components/password.comp';
+import ProfilePage from './components/profile.comp';
 export default function App() {
   const data = useSelector((c) => {
     console.log(c.show);
@@ -22,7 +23,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>React Redux</h1>
+      <h1>Welcome To Redux</h1>
       {data.name.length <= 0 ? <NameComp /> : null}
       {data.email.length <= 0 && data.name.length > 0 ? <EmailComp /> : null}
 
@@ -44,6 +45,14 @@ export default function App() {
       data.gender.length > 0 &&
       data.password.length <= 0 ? (
         <PasswordComp />
+      ) : null}
+
+      {data.name.length > 0 &&
+      data.email.length > 0 &&
+      data.mobile.length > 0 &&
+      data.gender.length > 0 &&
+      data.password.length > 0 ? (
+        <ProfilePage />
       ) : null}
     </div>
   );

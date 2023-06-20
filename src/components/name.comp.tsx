@@ -19,7 +19,7 @@ export default function NameComp() {
   const [name, setName] = React.useState('');
   return (
     <div>
-      <h1>React Redux</h1>
+      <h1>Enter your Name To Proceed</h1>
 
       <form action="/action_page.php">
         <label for="fname">Name:</label>
