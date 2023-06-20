@@ -15,8 +15,10 @@ export default function App() {
       <p>Start editing to see some magic happen :)</p>
 
       <button onClick={() => dispatch(increment())}>Click Me</button>
-
-      <button onClick={() => dispatch(incrementByValue(10))}>Click Me</button>
+      <div style={{ margin: '20px' }}></div>
+      <button onClick={() => dispatch(incrementByValue(10))}>
+        Click Me to Add 10{' '}
+      </button>
     </div>
   );
 }
