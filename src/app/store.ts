@@ -4,6 +4,5 @@ import increment from '../features/showSlice';
 export const store = configureStore({
   reducer: {
     show: showData,
-    increment: increment,
   },
 });
