@@ -13,10 +13,17 @@ export const DataContext = createContext<{
 });
 
 export const DataProvider = ({ ...props }) => {
+  const [data, setData] = React.useState();
+  React.useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
   return (
     <DataContext.Provider
       value={{
-        email: 'anandjha@gmail.com',
+        email: data?.title, //'anandjha@gmail.com',
         name: 'Anand',
         gender: 'Male',
       }}
