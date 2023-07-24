@@ -7,7 +7,7 @@ export const DataContext = createContext<{
   name?: string;
   gender?: string;
 }>({
-  email: 'birendraha@gmail.com',
+  email: undefined//'birendraha@gmail.com',
   //   name: 'Birendra',
   //   gender: 'Male',
 });
