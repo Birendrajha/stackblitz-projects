@@ -11,7 +11,7 @@ import {
 
 export default function EmailComp() {
   const data = useSelector((c) => {
-    console.log(c.show);
+    console.log(c);
     return c.show;
   });
   const dispatch = useDispatch();
